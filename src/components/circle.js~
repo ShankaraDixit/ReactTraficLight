@@ -1,0 +1,23 @@
+import React, { Component } from 'react';
+class Circle extends Component {
+
+	
+    render() {
+  let circle1 = {
+			height: 50,
+	    width: 50,
+			borderradius: 25,
+			backgroundcolor: this.props.color
+		}
+        return (
+						<div  className = "circle-light">
+							{this.props.color}
+						</div>
+        );
+    }
+}
+export default Circle;
+
+
+
+

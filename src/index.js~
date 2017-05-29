@@ -1,0 +1,58 @@
+import _ from 'lodash';
+import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
+import TraficSignal from './components/traficSignal';
+import Circle from './components/circle';
+
+class App extends Component {
+  
+
+
+	constructor(props) {
+    super(props);
+
+    this.state = {
+      color:'red' 
+    };
+	//	this.switchOn('red');
+  }
+
+	switchOn = (term)=> {
+	  
+    this.setState({ color: term });
+		this.timer();
+		
+  }
+	timer()
+	{
+		let term = this.state.color;
+		console.log(this.state.color);
+		if(this.state.color == 'red'){
+		//	this.setState({color : 'green'});	
+			term = 'green';	
+		}else{
+		//	this.setState({color : 'red'});	
+			term = 'red';
+		}
+		
+		setTimeout(this.switchOn(term), 5000);
+		
+	}
+	render() {
+	// const switchOn1 = setTimeout(this.switchOn(() => { this.timer() }), 5000);
+    return (
+      <div>
+        <TraficSignal onColorChange = {this.switchOn} color = {this.state.color}/>
+      </div>
+    );
+  }
+}
+
+ReactDOM.render(<App />, document.querySelector('.container'));
+
+
+/*setTimeout(this.switchOn((term)=>{
+		
+		
+		return this.state.color;
+		}), 5000);*/

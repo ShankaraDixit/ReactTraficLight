@@ -1,0 +1,66 @@
+.search-bar {
+  margin: 20px;
+  text-align: center;
+}
+
+.search-bar input {
+  width: 75%;
+}
+
+.video-item img {
+  max-width: 64px;
+}
+
+.video-detail .details {
+  margin-top: 10px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.list-group-item {
+  cursor: pointer;
+}
+
+.list-group-item:hover {
+  background-color: #eee;
+}
+
+.button-red {
+    background-color: #4CAF50;
+    color: ;
+		height: 40px;
+    width: 50px;
+	
+}
+
+.button-green {
+    background-color: #f44336;
+    color: green;
+		height: 40px;
+    width: 50px;
+	
+}
+
+.button-primary {
+    background-color: #f58220;
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 0; 
+    cursor: pointer;
+    border: 0;
+    border-radius: 6px;
+    height: 40px;
+    width: 100%;
+}
+
+.circle-light = {
+			height: 50px;
+	    width: 50px;
+			border-radius: 25px;
+			background-color: black;
+		}
