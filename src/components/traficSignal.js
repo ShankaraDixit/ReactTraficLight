@@ -2,33 +2,30 @@ import React, { Component } from 'react';
 import Circle from './circle';
 
 class TraficSignal extends Component {
-  constructor(props) {
+   constructor(props) {
     super(props);
 			
-		this.state = { color: this.props.color };
-		
   }
 
 
 	
   render() {
-		console.log("tf ",this.state.color);
     return (
       <div>
 				
         <button  className = "button-red"
-          onClick={() => {this.onInputChange('red'); this.setState({color : 'red'});}} >
+          onClick={() => {this.onInputChange()}} >
 			  </button>
 
 				 <button  className = "button-green"
-          onClick={()=> {this.onInputChange('green'); this.setState({color : 'green'});}}>
+          onClick={()=> {this.onInputChange()}}>
 				</button>
-				<Circle color = {this.state.color}/>
+				<Circle color = {this.props.color}/>
       </div>
     );
   }
 
-  onInputChange(term) {
+  onInputChange() {
  				
     this.props.onColorChange();
   }
