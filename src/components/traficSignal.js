@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Circle from './circle';
 
 class TraficSignal extends Component {
-   constructor(props) {
+  constructor(props) {
     super(props);
 			
   }
@@ -30,4 +30,5 @@ class TraficSignal extends Component {
     this.props.onColorChange();
   }
 }
+
 export default TraficSignal;
